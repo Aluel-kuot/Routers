@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import { Route } from "react-router";
+import { Link } from "react-router-dom";
 import './style.css'
 
 const LogIn=()=>{
@@ -8,6 +9,7 @@ const LogIn=()=>{
     console.log({username});
     console.log({password})
 
+
     const handleSubmit=async(e)=>{
         e.preventDefault();
 
@@ -15,7 +17,6 @@ const LogIn=()=>{
             username:username,
             password:password
         }
-
 try {
 const response =await fetch('https://dummyjson.com/auth/login', {
      method:'POST',
@@ -26,6 +27,8 @@ body:JSON.stringify(data),
     });
     const result=await response.json();
     console.log({result});
+    if (response.succesfull) {
+      }
 
     }catch (error){
         console.log(error.message)
@@ -41,17 +44,17 @@ body:JSON.stringify(data),
     />
     <br/>
     <br/>
-
     <input placeholder="Enter User Password" type="Password"
         onChange={(e)=>{setPassword(e.target.value)}}
     />
     <br/>
     <br/>
-    <button type="submit">Login</button>
+    <Link to={'/Products'}>
+        <button type="submit">Login
+        </button>
+    </Link>
 </form>
-
         </div>
     )
 }
-
 export default LogIn;

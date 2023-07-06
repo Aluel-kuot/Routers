@@ -12,10 +12,14 @@ border: solid 1px #e2e2e2;
 border-radius: 5px;
 
   } 
-  .form > button{
+   button{
       border: none;
       border-radius: 5px;
-      background-color: rgb(106,190,106);
+      background-color: rgb(106, 163, 190);
       padding: 12px 18px;
       color: #ffffff;
+  }
+  h1{
+    color: blue;
+    margin-top: 10%;
   }

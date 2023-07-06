@@ -5,7 +5,7 @@ import './style.css'
 
 
 
-const Products=()=>{
+const ProductDetails=()=>{
     const [products,setProducts] = useState([]);
     const [loading,setLoading] = useState ([false]);
   //   const [searchParams] = useSearchParams();
@@ -31,22 +31,28 @@ const Products=()=>{
         }
     };
     
-        if(loading){
-            return <h2>Loading...</h2>
-        }
         return (
             <div className="list">
-              <h1>All products</h1>
+              <h1>Details</h1>
               <div className="products">
                 {products.map((item) => (
                   <div key={item.id} className="item">
                     <img src={item.thumbnail} className="image" />
                     <div className="details">
                       <h2 className="title">{item.title}</h2>
+                      <h2 className="title">{item.id}</h2>
                       <p className="price">{item.price}</p>
                       <p className="discount">{item.discountPercentage}</p>
+                      <p className="discount">{item.rating}</p>
+                      <p className="discount">{item.discription}</p>
+                      <p className="discount">{item.stock}</p>
+                      <p className="discount">{item.category}</p>
+                      <p className="discount">{item.brand}</p>
+
+                      
+v
                     </div>
-                    <button className="view">View Details</button>
+                    <button className="view">Add to cart</button>
                   </div>
                 ))}
               </div>
@@ -54,7 +60,7 @@ const Products=()=>{
           );
         };
         
-        export default Products;
+        export default ProductDetails;
         
         
      
