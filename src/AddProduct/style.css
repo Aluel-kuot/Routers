@@ -1,0 +1,31 @@
+input{
+    padding: 10px 70px;
+    border: solid 1px rgb(102, 107, 165);
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-bottom: 5%;
+    display: flex;
+    margin-top: 2%;
+}
+.head{
+    color: #4834b9;
+    margin-left: 5%;
+    margin-top: 6%;
+    font-size: 50px;
+}
+.buton{
+    padding: 25px;
+    background-color: #3f2d91;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20%;
+    color: white;
+}
+
+.add{
+    margin-top: 5%;
+}
+.add h1{
+    text-align: center;
+    margin-bottom: 10%;
+}

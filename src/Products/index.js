@@ -20,14 +20,12 @@ const Products = () => {
         setLoading(false);
       }
     };
-
     getProducts();
   }, []);
 
   if (loading) {
     return <h2>Loading...</h2>;
   }
-
   return (
     <div className="list">
       <h1>All products</h1>
